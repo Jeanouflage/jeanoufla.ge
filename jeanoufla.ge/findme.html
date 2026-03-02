@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title>JEANOUFLAGE</title>
+
+  <style>
+
+    @keyframes colorShift{
+      0% {color: rgb(60, 211, 23)}
+      50% {color: rgb(50, 23, 197)}
+      100% {color: rgb(60, 211, 23)}
+    }
+
+    .stickers {
+        position: fixed;    /* Pins it to the screen */
+        top: 10px;          /* 10px from the top edge */
+        left: 10px;         /* 10px from the left edge */
+        display: flex;
+        flex-direction: column; /* Stacks them vertically like your screenshot */
+        gap: 5px;           /* Tight spacing between stickers */
+        z-index: 1000;      /* Keeps them above the background */
+    }
+
+    .stickers img {
+        width: 88px;
+        height: 31px;
+        image-rendering: pixelated; 
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        display: block;     /* Removes weird gaps between stacked images */
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box
+    }
+    @font-face {
+      font-family:"BigFont";
+      src: url("Fonts/Bungee/Bungee-Regular.ttf");
+    }
+    @font-face {
+      font-family:"SmallFont";
+      src: url("Fonts/Cascadia_Mono/CascadiaMono-VariableFont_wght.ttf");
+    }
+    h1 {
+        font-family: "BigFont";
+        -webkit-text-stroke: 2px black;
+        paint-order: stroke fill;
+        text-shadow: 3px 3px 0px #000;
+    
+        /* Animation Name | Duration | Loop Type */
+        animation: colorShift 5s infinite;
+    }
+    h2 {
+        font-family: "SmallFont";
+    }
+
+    body{
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;   
+      background-image: url('windowsxpnight.jpg');
+      background-size: cover; /* This makes the image cover the entire page */
+      background-repeat: no-repeat; /* Prevents the image from repeating */
+      background-position: center center; /* Centers the image on the page */
+      background-attachment: fixed;
+    }
+
+    .container {
+      background: rgba(255, 255, 255, 0.5);
+      backdrop-filter: blur(1px);
+      border-radius: 15px;
+      border: 1px solid rgba(255,255,255,0.1);
+      padding: 40px;
+      text-align: center;
+      width: 90%;
+      max-width: 600px;
+    }
+    a {
+      color: #ffffff;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+    a:hover {
+      color: white;
+      text-shadow: 0 0 10px rgb(60, 211, 23), 0 0 20px rgb(60, 211, 23)
+    }
+    .nav-links h3 {
+      margin: 15px 0;
+    }
+
+    .mute-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #c0c0c0; /* Classic grey */
+    border: 2px solid;
+    border-color: #ffffff #808080 #808080 #ffffff; /* 3D effect */
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-family: "SmallFont", sans-serif;
+    font-size: 12px;
+    color: black;
+    z-index: 1000;
+}
+
+    .mute-btn:active {
+       border-color: #808080 #ffffff #ffffff #808080; /* "Pressed" effect */
+}
+
+    .mute-btn img {
+        width: 20px;
+       margin-right: 8px;
+}
+
+
+
+  </style>
+
+</head>
+
+<body>
+
+<audio id="bg-music" loop>
+  <source src="up-in-flames.mp3" type="audio/mpeg">
+</audio>
+
+<div class="container">
+    <h1 style="font-family:BigFont; font-size: 50px">Jeanouflage</h1>
+    <h1 style="font-family:BigFont; font-size: 30px">Jean Sciberras</h1>
+    <h1 style="font-family:BigFont; color:white; font-size: 30px">-----</h1>
+    <h2 style="font-family: SmallFont; color:white">we live we love we lie</h2>
+    <div class="nav-links">
+        <h3>discord: jeanouflage</h3>
+        <h3><a href="https://discord.gg/eh9aevRbeF">dead discord server</a></h3>
+        <h3><a href="https://instagram.com/jeanouflage">instagram</a></h3>
+        <h3><a href="https://youtube.com/@jeanouflage">youtube</a></h3>
+        <h3><a href="https://jeanouflage.bearblog.dev/">blog</a></h3>
+        <h3><a href="https://twitter.com/jeanouflage">twitter</a></h3>
+        <h3><a href="https://maltadon.social/@jean">maltadon.social (mastodon)</a></h3>
+        <h3><a href="https://www.reddit.com/user/Jeanouflage">reddit</a></h3>
+        <h3><a href="https://www.facebook.com/profile.php?id=100079029212057">facebook</a></h3>
+        <h3><a href="https://last.fm/user/jeanouflage">last.fm</a></h3>
+        <h3><a href="https://www.wattpad.com/user/Jeanouflage">wattpad</a></h3>
+        <h3><a href="https://www.deviantart.com/jeanouflage">deviantart</a></h3>
+        <h3><a href="https://www.pi.fyi/u/jeanouflage">pi.fyi</a></h3>
+        <h3>stoat: jean#9403</h3>
+        <h3><a href="https://jeanouflage.newgrounds.com">newgrounds</a></h3>
+        <h3><a href="https://namemc.com/profile/Jeanouflage.1">nameMC</a></h3>
+
+    </div>
+</div>
+
+<div class="stickers">
+  <a href="homepage.html"><img src="jeanoufla.ge.png" alt="jeanoufla.ge"></a>
+  <a href="https://such.blue"><img src="such.blue.png" alt="such.blue"></a>
+  <a href="https://taxpaye.rs"><img src="taxpaye.rs.png" alt="taxpaye.rs"></a>
+  <a href="https://vea.st"><img src="vea.st.png" alt="vea.st"></a>
+</div>
+
+<h1></h1>
+
+<div id="audio-control" class="mute-btn">
+  <img id="mute-icon" src="https://img.icons8.com/color/48/000000/windows-xp.png" alt="🎵">
+  <span id="audio-status">PLAY MUSIC</span>
+</div>
+
+<script>
+  const audio = document.getElementById('bg-music');
+  const btn = document.getElementById('audio-control');
+  const statusText = document.getElementById('audio-status');
+
+  btn.addEventListener('click', function() {
+    if (audio.paused) {
+      audio.play();
+      statusText.innerText = "Up In Flames - FNF";
+      btn.style.background = "#00ff00"; // Glows green when playing
+    } else {
+      audio.pause();
+      statusText.innerText = "PLAY MUSIC";
+      btn.style.background = "#c0c0c0";
+    }
+  });
+</script>
+
+</body>
+
+</html>
+
+
